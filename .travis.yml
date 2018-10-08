@@ -1,12 +1,11 @@
 jobs:
   include:
     - stage: test
-      script: bundle show
-      rvm: 2.3
+      script: echo $VER
+      env: VER=FOO
     - stage: test
-      script: bundle show
-      rvm: 2.4
+      script: echo $VER
+      env: VER=BAR
     - stage: deploy
       name: Deploy stage
       script: bundle show
-      rvm: 2.3
