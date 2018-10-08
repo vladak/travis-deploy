@@ -7,5 +7,6 @@ jobs:
       script: echo $VER
       env: VER=BAR
     - stage: deploy
+      if: tag IS present
       name: Deploy stage
       script: echo "TAG = $TRAVIS_TAG"
