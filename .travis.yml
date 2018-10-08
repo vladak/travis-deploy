@@ -8,4 +8,4 @@ jobs:
       env: VER=BAR
     - stage: deploy
       name: Deploy stage
-      script: bundle show
+      script: echo "TAG = $TRAVIS_TAG"
