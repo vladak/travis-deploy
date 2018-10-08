@@ -1,0 +1,12 @@
+jobs:
+  include:
+    - stage: test
+      script: bundle show
+      rvm: 2.3
+    - stage: test
+      script: bundle show
+      rvm: 2.4
+    - stage: deploy
+      name: Deploy stage
+      script: bundle show
+      rvm: 2.3
