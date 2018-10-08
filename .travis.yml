@@ -7,6 +7,6 @@ jobs:
       script: echo $VER
       env: VER=BAR
     - stage: deploy
-      if: branch = "master" AND tag IS present
+      if: repo = "vladak/travis-deploy" AND tag IS present
       name: Deploy stage
       script: echo "TAG = $TRAVIS_TAG"
